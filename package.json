@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "description": "CommonJS optimized debounce utility.",
+  "keywords": [
+    "debounce utility"
+  ],
   "files": [
     "index.js",
     "debouncer.js"
