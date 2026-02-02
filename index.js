@@ -1,2 +1,1 @@
-const { debouncer } = require("./debouncer");
-module.exports = { debouncer:  debouncer}
+export {debouncer as default} from "./debouncer"

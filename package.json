@@ -1,18 +1,31 @@
 {
-  "name": "debouncer",
+  "name": "shrikar-debouncer",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "type": "module",
   "description": "CommonJS optimized debounce utility.",
   "keywords": [
     "debounce utility"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "files": [
-    "index.js",
-    "debouncer.js"
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:cjs": "esbuild index.js --bundle --format=cjs --outfile=dist/index.cjs",
+    "build:esm": "esbuild index.js --bundle --format=esm --outfile=dist/index.mjs",
+    "build": "npm run build:cjs && npm run build:esm"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "tsup": "^8.5.1"
+  }
 }
