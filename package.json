@@ -21,8 +21,10 @@
     "build:cjs": "esbuild src/index.js --bundle --format=cjs --outfile=dist/index.cjs",
     "build:esm": "esbuild src/index.js --bundle --format=esm --outfile=dist/index.mjs",
     "build": "npm run build:cjs && npm run build:esm",
-     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "author": "",
   "license": "ISC",
@@ -31,7 +33,14 @@
     "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "tsup": "^8.5.1"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint"
+    ]
   }
 }
