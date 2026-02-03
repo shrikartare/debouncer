@@ -1,5 +1,5 @@
 // Debouncer function utility
-let unusedvars, myvars;
+let unusedvars, myvars, myunusedvars;
 export const debouncer = (func, delay) => {
   let timeoutId;
   return function () {
