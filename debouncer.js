@@ -1,7 +1,9 @@
-export const debouncer = (func,delay) => {
-    let timeoutId
-    return function() {
-        if(timeoutId) clearTimeout(timeoutId)
-        timeoutId = setTimeout(func,delay)
-    }
-}
+// Debouncer function
+let unusedvars;
+export const debouncer = (func, delay) => {
+  let timeoutId;
+  return function () {
+    if (timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(func, delay);
+  };
+};
