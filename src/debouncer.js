@@ -7,3 +7,5 @@ export const debouncer = (func, delay) => {
     timeoutId = setTimeout(func, delay);
   };
 };
+
+isLintCheck = 10;
