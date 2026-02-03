@@ -19,6 +19,10 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
+      globals: {
+        setTimeout: "readonly",
+        clearTimeout: "readonly"
+      }
     },
     rules: {
       "no-unused-vars": "warn",
