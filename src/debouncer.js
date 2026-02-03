@@ -1,5 +1,4 @@
 // Debouncer function utility
-let unusedvars, myvars, myunusedvars;
 export const debouncer = (func, delay) => {
   let timeoutId;
   return function () {
@@ -7,5 +6,3 @@ export const debouncer = (func, delay) => {
     timeoutId = setTimeout(func, delay);
   };
 };
-
-isLintCheck = 10;
