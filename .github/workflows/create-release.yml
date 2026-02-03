@@ -21,7 +21,7 @@ jobs:
         run: npm ci
       
       - name: Lint only changed files (like lint-staged)
-        run: npm run lint-staged
+        run: npm lint
 
 
       - name: Create GitHub Release
